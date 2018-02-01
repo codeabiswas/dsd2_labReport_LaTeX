@@ -1,43 +1,57 @@
 \documentclass[letterpaper]{article}
 \usepackage{geometry}
 \usepackage{tabto}
-\usepackage{afterpage}
+\usepackage{changepage}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\graphicspath{{report_images/}}
 \usepackage{lipsum}
+\usepackage{fancyhdr}
+\setlength{\parskip}{1em}
+
 \geometry{letterpaper, top=2.5cm, left=2cm, right=2cm, bottom=2.5cm} % Configure page margins with geometry
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{YOUR-NAME-HERE}
+\lhead{Laborator Exercise $<$Number$>$}
+\rfoot{Page \thepage}
+
+
 \setcounter{page}{0}
 \thispagestyle{empty}
 
 \begin{document}
 	
-
-	
-	\begin{center}
-		\textbf{CMPE 260 Laboratory Exercise $<$Number$>$ 
-			\\	\vspace{0.5cm} $<$Title$>$}
-	\end{center}
-	\vspace{12cm}
-	\tabto{8cm} Andrei Biswas \\
-	\tabto{8cm} \textbf{Performed: }$<$Date$>$ \\
-	\tabto{8cm} \textbf{Submitted: }$<$Date$>$ \\
-	\vspace{0.5cm}
-	\tabto{8cm} \textbf{Lab Section: }$<$Number$>$ \\
-	\tabto{8cm} \textbf{Instructor: }$<$Name$>$ \\
-	\tabto{8cm} \textbf{TA: }$<$Name$>$ \\
-	\vspace{0.5cm}
-	\tabto{8cm} \textbf{Lecture Section: }$<$Number$>$ \\
-	\tabto{8cm} \textbf{Professor: }$<$Name$>$ \\
-	\vspace{1cm} \\
-	By submitting this report, you attest that you neither have given nor have received any assistance (including writing, collecting data, plotting figures, tables or graphs, or using previous student reports as a reference), and you further acknowledge that giving or receiving such assistance will result in a failing grade for this course.
+	\begin{adjustwidth*}{2cm}{2cm}
 		
-	\vspace{1cm}
-	\tabto{1.5cm} Your Signature: \hrulefill
+		\begin{center}
+		\textbf{CMPE 260 Laboratory Exercise $<$Number$>$ 
+				\\	\vspace{0.5cm} $<$Title$>$}
+		\end{center}
+		\vspace{12cm}
+		\tabto{8cm} YOUR-NAME-HERE \\
+		\tabto{8cm} \textbf{Performed: }$<$Date$>$ \\
+		\tabto{8cm} \textbf{Submitted: }$<$Date$>$ \\
+		\vspace{0.5cm}
+		\tabto{8cm} \textbf{Lab Section: }$<$Number$>$ \\
+		\tabto{8cm} \textbf{Instructor: }$<$Name$>$ \\
+		\tabto{8cm} \textbf{TA: }$<$Name$>$ \\
+		\vspace{0.5cm}
+		\tabto{8cm} \textbf{Lecture Section: }$<$Number$>$ \\
+		\tabto{8cm} \textbf{Professor: }$<$Name$>$ \\
+		\vspace{1cm} \\
+		By submitting this report, you attest that you neither have given nor have received any assistance (including writing, collecting data, plotting figures, tables or graphs, or using previous student reports as a reference), and you further acknowledge that giving or receiving such assistance will result in a failing grade for this course.
+		
+		\vspace{1cm}
+		\tabto{1.5cm} Your Signature: \hrulefill
+	\end{adjustwidth*}	
+	
 	
 	\renewcommand*\contentsname{Table of Contents \hrulefill}
 	\tableofcontents
-	
-			
+		
 	\newpage
-	%\input{report_sections/tableOfContents}
 	\input{report_sections/abstract}
 	\input{report_sections/designMethodology}
 	\input{report_sections/results}
