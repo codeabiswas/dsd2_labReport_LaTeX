@@ -1,5 +1,5 @@
 # labReportTemplate_LaTeX
-This is a lab report template in LaTeX for DSD II. I have tried to make it as simple as possible to use (AKA tons of comments), so I hope this is a good way for newcomers to learn and meddle around with this amazing technology. 
+This is a lab report template in LaTeX for Digital Systems Design II. I have tried to make it as simple as possible to use (AKA tons of comments), so I hope this is a good way for newcomers to learn and meddle around with this amazing technology. 
 
 INSTRUCTIONS ON HOW TO USE THIS TEMPLATE AND/OR SET UP LATEX AND AN EDITOR:
 
