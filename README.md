@@ -1,2 +1,2 @@
 # labReportTemplate_LaTeX
-# Just a lab report template for DSD II.
+This is a lab report template for DSD II.

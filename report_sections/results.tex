@@ -10,14 +10,16 @@
 
 \indent \lipsum[1-2] % DELETE EVERYTHING AFTER INDENT AND START TYPING STUFF
 
+% Place a table:
 How to Table:
-\begin{table}[H]
-	\caption{This is a Table title. Also do not need to number this.}
-	\begin{center}
-		\begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}|  }
-			\hline
-			\multicolumn{4}{|c|}{Country List} \\
-			\hline
+\begin{table}[H] % Capital H is important! Always use it
+	\caption{This is a Table title. Also do not need to number this.} % CAPTION YOUR FIGURE PROPERLY. NUMBERING IS TAKEN CARE OF.
+	\begin{center} % Center the table
+		\begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}|  } % Create 4 columns each 3 cm wide.
+			\hline % Draw a horizontal line
+			\multicolumn{4}{|c|}{Country List} \\ % Name the topmost row
+			\hline % Draw a line
+			% Use &s to add stuff to every box. Use \\ to create a new row.
 			Country Name or Area Name & ISO ALPHA 2 Code & ISO ALPHA 3 Code & ISO numeric Code \\
 			\hline
 			Afghanistan & AF & AFG & 004 \\
