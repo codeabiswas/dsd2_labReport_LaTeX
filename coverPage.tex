@@ -1,62 +1,112 @@
+%----------------------------------------------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------------------------------------------
+
 \documentclass[letterpaper]{article}
+
+%----------------------------------------------------------------------------------------------------------------------------
+% LIST OF ALL PACKAGES TO BE USED
+%----------------------------------------------------------------------------------------------------------------------------
 \usepackage{geometry}
 \usepackage{tabto}
 \usepackage{changepage}
-\usepackage[utf8]{inputenc}
 \usepackage{graphicx}
-\graphicspath{{report_images/}}
 \usepackage{lipsum}
-\usepackage{listings}
 \usepackage{fancyhdr}
-\setlength{\parskip}{1em}
+\usepackage{listings}
+\usepackage{float}
+%----------------------------------------------------------------------------------------------------------------------------
 
-\geometry{letterpaper, top=2.5cm, left=2cm, right=2cm, bottom=2.5cm} % Configure page margins with geometry
+%----------------------------------------------------------------------------------------------------------------------------
+% PREAMBLE OBJECTS TO BE SET FOR TEMPLATE
+%----------------------------------------------------------------------------------------------------------------------------
+\geometry{letterpaper, top=2.5cm, left=2cm, right=2cm, bottom=2.5cm} % Configure page margins for everything except for cover page
+\graphicspath{{report_images/}} % Folder where all the figures lie
+\setlength{\parskip}{1em} % A bit more space between paragraphs than default
+\pagestyle{fancy} % For nice header reasons 
+\fancyhf{} % For nice header reasons
+\rhead{YOUR-NAME-HERE} % PUT YOUR NAME HERE
+\lhead{Laborator Exercise $<$Number$>$} % EDIT ACCORDINGLY AND TAKE OUT ANYTHING BETWEEN THE $s
+\rfoot{Page \thepage} % Write "Page" before the page number
+%----------------------------------------------------------------------------------------------------------------------------
 
-\pagestyle{fancy}
-\fancyhf{}
-\rhead{YOUR-NAME-HERE}
-\lhead{Laborator Exercise $<$Number$>$}
-\rfoot{Page \thepage}
-
-
-\setcounter{page}{0}
-\thispagestyle{empty}
+%---------------------------------------------------------------------------------------------------------------------------- 
+% PREAMBLE OBJECTS TO BE SET FOR COVER PAGE
+%----------------------------------------------------------------------------------------------------------------------------
+\setcounter{page}{0} % Start the counting at 0
+\thispagestyle{empty} % Don't show any page numbers or heade
+%----------------------------------------------------------------------------------------------------------------------------
 
 \begin{document}
 	
-	\begin{adjustwidth*}{2cm}{2cm}
+	\begin{adjustwidth*}{2cm}{2cm} % Compress the text a bit
 		
 		\begin{center}
-		\textbf{CMPE 260 Laboratory Exercise $<$Number$>$ 
-				\\	\vspace{0.5cm} $<$Title$>$}
+		\textbf{CMPE 260 Laboratory Exercise $<$Number$>$ \\ % EDIT ACCORDINGLY AND TAKE OUT ANYTHING BETWEEN THE $s	 
+				\vspace{0.5cm} 
+				$<$Title$>$}
 		\end{center}
-		\vspace{12cm}
-		\tabto{8cm} YOUR-NAME-HERE \\
-		\tabto{8cm} \textbf{Performed: }$<$Date$>$ \\
-		\tabto{8cm} \textbf{Submitted: }$<$Date$>$ \\
-		\vspace{0.5cm}
-		\tabto{8cm} \textbf{Lab Section: }$<$Number$>$ \\
-		\tabto{8cm} \textbf{Instructor: }$<$Name$>$ \\
-		\tabto{8cm} \textbf{TA: }$<$Name$>$ \\
-		\vspace{0.5cm}
-		\tabto{8cm} \textbf{Lecture Section: }$<$Number$>$ \\
-		\tabto{8cm} \textbf{Professor: }$<$Name$>$ \\
-		\vspace{1cm} \\
-		By submitting this report, you attest that you neither have given nor have received any assistance (including writing, collecting data, plotting figures, tables or graphs, or using previous student reports as a reference), and you further acknowledge that giving or receiving such assistance will result in a failing grade for this course.
+	
+		\vspace{12cm} % Add a lot of space in between
 		
-		\vspace{1cm}
-		\tabto{1.5cm} Your Signature: \hrulefill
+		\tabto{8cm} $<$YOUR-NAME-HERE$>$ \\ % EDIT ACCORDINGLY AND TAKE OUT ANYTHING BETWEEN THE $s
+		\tabto{8cm} \textbf{Performed: }$<$Date$>$ \\ % EDIT ACCORDINGLY AND TAKE OUT ANYTHING BETWEEN THE $s
+		\tabto{8cm} \textbf{Submitted: }$<$Date$>$  % EDIT ACCORDINGLY AND TAKE OUT ANYTHING BETWEEN THE $s
+				
+		\tabto{8cm} \textbf{Lab Section: }$<$Number$>$ \\ % EDIT ACCORDINGLY AND TAKE OUT ANYTHING BETWEEN THE $s
+		\tabto{8cm} \textbf{Instructor: }$<$Name$>$ \\ % EDIT ACCORDINGLY AND TAKE OUT ANYTHING BETWEEN THE $s
+		\tabto{8cm} \textbf{TA: }$<$Name$>$ % EDIT ACCORDINGLY AND TAKE OUT ANYTHING BETWEEN THE $s
+				
+		\tabto{8cm} \textbf{Lecture Section: }$<$Number$>$ \\ % EDIT ACCORDINGLY AND TAKE OUT ANYTHING BETWEEN THE $s
+		\tabto{8cm} \textbf{Professor: }$<$Name$>$ % EDIT ACCORDINGLY AND TAKE OUT ANYTHING BETWEEN THE $s
+		
+		\vspace{0.5cm}
+		
+		\noindent By submitting this report, you attest that you neither have given nor have received any assistance (including writing, collecting data, plotting figures, tables or graphs, or using previous student reports as a reference), and you further acknowledge that giving or receiving such assistance will result in a failing grade for this course.
+		
+		\vspace{0.5cm}
+		
+		\tabto{1.5cm} Your Signature: \hrulefill % \hrulefill adds a straight, horizontal line, which can be used for signatures (or just make things look nice)
+	
 	\end{adjustwidth*}	
 	
-	
-	\renewcommand*\contentsname{Table of Contents \hrulefill}
-	\tableofcontents
-		
-	\newpage
+%---------------------------------------------------------------------------------------------------------------------------- 
+% TABLE OF CONTENTS: DO NOT WORRY ABOUT THIS - IT WILL ADJUST THE SECTIONS' PAGE NUMBERS ACCORDINGLY!
+%----------------------------------------------------------------------------------------------------------------------------
+	\renewcommand*\contentsname{Table of Contents \hrulefill}  % In case you want to change the name from Table of Contents
+	\tableofcontents % Instantiate a Table of Contents
+%----------------------------------------------------------------------------------------------------------------------------
+
+	\newpage % Force a new page
+
+%---------------------------------------------------------------------------------------------------------------------------- 
+% ABSTRACT INPUT
+%----------------------------------------------------------------------------------------------------------------------------
 	\input{report_sections/abstract}
+%----------------------------------------------------------------------------------------------------------------------------
+
+%---------------------------------------------------------------------------------------------------------------------------- 
+% DESIGN METHODOLOGY INPUT
+%----------------------------------------------------------------------------------------------------------------------------
 	\input{report_sections/designMethodology}
+%----------------------------------------------------------------------------------------------------------------------------
+
+%---------------------------------------------------------------------------------------------------------------------------- 
+% RESULTS INPUT
+%----------------------------------------------------------------------------------------------------------------------------
 	\input{report_sections/results}
+%----------------------------------------------------------------------------------------------------------------------------
+
+%---------------------------------------------------------------------------------------------------------------------------- 
+% CONCLUSION INPUT
+%----------------------------------------------------------------------------------------------------------------------------
 	\input{report_sections/conclusion}
+%----------------------------------------------------------------------------------------------------------------------------
+
+%---------------------------------------------------------------------------------------------------------------------------- 
+% APPENDIX INPUT
+%----------------------------------------------------------------------------------------------------------------------------
 	\input{report_sections/appendixPage}
-	
+%----------------------------------------------------------------------------------------------------------------------------	
+
 \end{document}
